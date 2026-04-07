@@ -1,8 +1,8 @@
 const app = require("./src/app");
+const connectDb = require("./src/db/db.js");
 
-app.get("/",(req,res)=>{
-    res.send("hello world");
-})
+connectDb();
+
 
 app.listen(3000,()=>{
     console.log("App is active and listening on Port No:3000");
